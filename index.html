@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestine website bar plugin documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .code-block {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .screenshot {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+    <script type="text/javascript" src="palestine-bar.js" data-text="Save Palestinian children" data-bg-color="#000" data-bar-mode="popup-right"></script>
+</head>
+<body>
+    <div style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);" class="palestine-bar"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" viewBox="0 0 6 3" class="palestine-bar-flag"><rect fill="#009639" width="6" height="3"></rect><rect fill="#FFF" width="6" height="2"></rect><rect width="6" height="1"></rect><path fill="#ED2E38" d="M0,0l2,1.5L0,3Z"></path></svg><div class="palestine-bar-text">Save Palestinian children</div><button style="background-color: rgb(237, 46, 56); color: rgb(255, 255, 255);" class="palestine-bar-button" onclick="window.open('https://irusa.org/middle-east/palestine/', '_blank');">Donate now</button></div>
+    <div class="container">
+        <h1>Palestine website bar plugin documentation</h1>
+
+        <h2>JavaScript Plugin</h2>
+
+        <p>
+            The plugin displays a website bar for the support and donation raising for Palestine. Like the one on top if this page or a popup like the one on the corner of this page.
+        </p>
+
+        <h3>Usage Instructions</h3>
+
+        <div class="code-block">
+            <p>Include the JavaScript file in your HTML and the bar will appear automatically:</p>
+            <code>&lt;script src="palestine-bar.js"&gt;&lt;/script&gt;</code>
+
+            <p>You can customize the content and the appearance of the bar by using one or more the following parameters:</p>
+            <ul>
+                <li><strong>data-text:</strong> The text in the middle.</li>
+                <li><strong>data-button-text:</strong> The text on the donation button.</li>
+                <li><strong>data-bar-mode:</strong>The display mode of the bar, it can be one of theses three <strong>fixed-header</strong> , <strong>fixed-footer</strong> , <strong>popup-left</strong> , <strong>popup-right</strong> , <strong>header</strong> which is the default.</li>
+                <li><strong>data-bg-color:</strong> The background color of the bar. default is #000 (Black).</li>
+                <li><strong>data-button-color:</strong> The color of the donation button. default is #ED2E38 (Red).</li>
+                <li><strong>data-text-color:</strong> The color of the text. default is #fff (White).</li>
+                <li><strong>data-donation-link:</strong> The donation link, don't use this parameter if you wish to use the default donation link.</li>
+                <li><strong>data-image-link:</strong> A URL to the image to be displayed on the Popup.</li>
+            </ul>
+            <p>Like in the following example:</p>
+            <code>&lt;script src="palestine-bar.js" data-text="أنقذوا أطفال فلسطين" data-button-text="تبرع الان" data-bar-mode="header" data-bg-color="#000" data-button-color="#ED2E38" data-text-color="#fff" data-donation-link="..." &gt;&lt;/script&gt;</code>
+            <p>If you wish to further customize the bar using css, use the following classes: <strong>palestine-bar, palestine-bar-flag, palestine-bar-text, palestine-bar-button</strong></p>
+        </div>
+
+        <h2>WordPress Plugin</h2>
+
+        <p>
+            The wordpress plugin is a wrapper for the javascript plugin. It even provides a settings page in the wordpress dashboard to facilitate the customization of the palestine website bar.
+        </p>
+
+        <h3>Installation</h3>
+
+        <ol>
+            <li>Download the plugin ZIP file: <a href="wp-plugin/palestine-bar.zip">palestine-bar.zip</a></li>
+            <li>Log in to your WordPress admin panel.</li>
+            <li>Go to <strong>Plugins</strong> &gt; <strong>Add New</strong>.</li>
+            <li>Click the <strong>Upload Plugin</strong> button.</li>
+            <li>Choose the ZIP file and click <strong>Install Now</strong>.</li>
+            <li>Activate the plugin after installation.</li>
+        </ol>
+
+        <p>
+            Once activated the bar will be displayed automatically.
+        </p>
+
+        <p>
+            To cutomize the bar:
+            <li>Log in to your WordPress admin panel.</li>
+            <li>Go to <strong>Settings</strong> &gt; <strong>PalestineBar</strong>.</li>
+        </p>
+
+        <h3>Plugin installation:</h3>
+        <img class="screenshot" src="screenshots/wp_plugin_install.png" alt="Installation">
+        <img class="screenshot" src="screenshots/wp_plugin_install_2.png" alt="Installation">
+
+        <h3>The settings page:</h3>
+        <img class="screenshot" src="screenshots/wp_plugin_settings_hi.png" alt="The settings page">
+
+    </div>
+
+</body>
+</html>
